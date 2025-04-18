@@ -5,9 +5,8 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface EcommerceRepoMongoDB extends MongoRepository<LoginData, String> {
+public interface EcommerceRepoMongoDB extends MongoRepository< LoginData , String> {
     LoginData findByUsernameAndPassword(String username, String password);
-
-
+    LoginData findByUsername(String username);
 }
 

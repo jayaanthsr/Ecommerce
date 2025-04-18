@@ -13,7 +13,11 @@ function Login() {
     var login=()=>{
         axios.post("http://localhost:8080/login",{username:username,password:password})
             .then(res=>{
-                if(res.data){
+                if(username==="admin" && res.data){
+                    window.alert("Admin Login completed successfully");
+                    navigate("/admin")
+                }
+                else if(res.data){
                     window.alert("Login successfully");
                     navigate("/home")
                 }

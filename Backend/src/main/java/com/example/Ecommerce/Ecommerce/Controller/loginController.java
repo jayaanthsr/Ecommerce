@@ -18,8 +18,15 @@ public class loginController {
     private EcommerceRepoMongoDB mongoDB;
 
     @PostMapping("/signup")
-    public LoginData Signup(@RequestBody LoginData loginData) {
-        return mongoDB.save(loginData);
+    public boolean Signup(@RequestBody LoginData loginData) {
+        LoginData username = mongoDB.findByUsername(loginData.getUsername());
+        if(username==null){
+            mongoDB.save(loginData);
+            return true;
+        }else{
+            return false;
+        }
+
     }
 
     @PostMapping("/login")

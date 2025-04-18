@@ -13,7 +13,13 @@ function SignUp() {
     var login=()=>{
         axios.post("http://localhost:8080/signup",{username:username,password:password})
             .then(res=>{console.log(res)
-            navigate("/")})
+                if(res.data){
+                    navigate("/")
+                }
+                else{
+                    window.alert("username already exist")
+                }
+            })
             .catch(err=>{console.log(err)})
     }
 
