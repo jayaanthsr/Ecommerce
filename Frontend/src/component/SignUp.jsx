@@ -14,7 +14,7 @@ function SignUp() {
         axios.post("http://localhost:8080/signup",{username:username,password:password})
             .then(res=>{console.log(res)
                 if(res.data){
-                    navigate("/")
+                    navigate("/login")
                 }
                 else{
                     window.alert("username already exist")

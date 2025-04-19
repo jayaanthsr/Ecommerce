@@ -4,30 +4,35 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 
 function Login() {
+
     let loginContainer = "login-container";
     let feild="feild";
     const [username, setUserName] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
-    var login=()=>{
-        axios.post("http://localhost:8080/login",{username:username,password:password})
-            .then(res=>{
-                if(username==="admin" && res.data){
+    var login=()=> {
+
+        axios.post("http://localhost:8080/login", {username: username, password: password})
+            .then(res => {
+                localStorage.setItem("isLogged", "false");
+                if (username === "admin" && res.data) {
                     window.alert("Admin Login completed successfully");
+                    localStorage.setItem("isLogged", "admin");
                     navigate("/admin")
-                }
-                else if(res.data){
+                } else if (res.data) {
                     window.alert("Login successfully");
-                    navigate("/home")
-                }
-                else{
+                    localStorage.setItem("userName",username);
+                    localStorage.setItem("isLogged","user")
+                    navigate("/")
+                } else {
                     window.alert("incorrect username or password");
                 }
             })
-            .catch(err=>{console.log(err)})
+            .catch(err => {
+                console.log(err)
+            })
     }
-
     return (
         <>
             <div className={loginContainer}>

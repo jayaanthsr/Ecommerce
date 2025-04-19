@@ -1,65 +1,118 @@
 .admin-container {
-    max-width: 800px;
-    margin: 40px auto;
+    font-family: sans-serif;
     padding: 20px;
-    border-radius: 12px;
-    background-color: #f8f9fa;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-.product-form {
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.sticky-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: grid;
-    gap: 10px;
-    margin-bottom: 30px;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    align-items: center;
 }
 
-.product-form input {
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+.sticky-form label {
+    font-weight: bold;
+    color: #555;
 }
 
-.product-form button {
-    padding: 10px 15px;
+.sticky-form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.sticky-form button {
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 6px;
+    padding: 12px 20px;
+    border-radius: 4px;
     cursor: pointer;
-    margin-top: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    grid-column: span 2; /* Make the button span both columns */
+    justify-self: center; /* Center the button */
 }
 
-.product-form button:hover {
+.sticky-form button:hover {
     background-color: #0056b3;
+}
+
+.product-list-container {
+    overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
 }
 
 .product-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* To contain the box shadow and border-radius */
 }
 
-.product-table th,
-.product-table td {
-    border: 1px solid #ddd;
+.product-table thead th {
+    background-color: #f2f2f2;
+    color: #333;
     padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+.product-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.product-table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.product-table tbody td:last-child {
     text-align: center;
 }
 
-.product-table th {
-    background-color: #343a40;
-    color: white;
-}
-
-.product-table button {
-    padding: 6px 10px;
+.product-table tbody button {
     background-color: #dc3545;
     color: white;
     border: none;
+    padding: 8px 12px;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
 }
 
-.product-table button:hover {
-    background-color: #b02a37;
+.product-table tbody button:hover {
+    background-color: #c82333;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .sticky-form {
+        grid-template-columns: 1fr; /* Stack labels and inputs on smaller screens */
+    }
+
+    .sticky-form label {
+        margin-bottom: 5px;
+    }
+
+    .sticky-form button {
+        grid-column: 1; /* Button takes full width */
+    }
 }
