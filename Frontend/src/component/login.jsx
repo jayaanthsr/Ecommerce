@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./styles/login.css"
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import {toast} from "react-toastify";
 
 function Login() {
 
@@ -15,18 +16,23 @@ function Login() {
 
         axios.post("http://localhost:8080/login", {username: username, password: password})
             .then(res => {
-                localStorage.setItem("isLogged", "false");
+
+                sessionStorage.setItem("isLogged", "false");
                 if (username === "admin" && res.data) {
-                    window.alert("Admin Login completed successfully");
-                    localStorage.setItem("isLogged", "admin");
+                    toast.success("Admin logged in successfully!",{
+                        position: "top-right",
+                        autoClose: 3000,
+                    });
+                    sessionStorage.setItem("isLogged", "admin");
                     navigate("/admin")
                 } else if (res.data) {
                     window.alert("Login successfully");
-                    localStorage.setItem("userName",username);
-                    localStorage.setItem("isLogged","user")
+                    sessionStorage.setItem("userName",username);
+                    sessionStorage.setItem("isLogged","user")
                     navigate("/")
                 } else {
-                    window.alert("incorrect username or password");
+                    toast.error("User name or password is not exist",{autoClose: 3000,
+                    position: "top-center",});
                 }
             })
             .catch(err => {

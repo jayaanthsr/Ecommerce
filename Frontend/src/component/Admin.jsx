@@ -1,107 +1,135 @@
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import axios from "axios";
-import "./styles/Admin.css"
+import ProductForm from "./components/ProductForm";
+import ProductTable from "./components/ProductTable";
+import "./styles/Admin.css";
 
 function Admin() {
-    const [productName, setProductName] = useState("");
-    const [productPrice, setProductPrice] = useState("");
-    const [productDescription, setProductDescription] = useState("");
     const [productData, setProductData] = useState([]);
+    const [editingProduct, setEditingProduct] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
-        displayProductList();
+        fetchProducts();
     }, []);
 
-    const displayProductList = () => {
-        axios.get("http://localhost:8080/admin/display").then((res) => {
-            setProductData(res.data);
-        });
+    const fetchProducts = async () => {
+        setIsLoading(true);
+        try {
+            const response = await axios.get("http://localhost:8080/admin/display");
+            setProductData(response.data);
+        } catch (error) {
+            toast.error("Error fetching products");
+            console.error("Error fetching products:", error);
+        } finally {
+            setIsLoading(false);
+        }
     };
 
-    const Add = () => {
-        axios
-            .post("http://localhost:8080/admin/add", {
-                productName: productName,
-                productPrice: parseInt(productPrice),
-                productDescription: productDescription,
-            })
-            .then((res) => {
-                alert("Successfully added");
-                setProductName("");
-                setProductPrice("");
-                setProductDescription("");
-                displayProductList();
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+    const handleAddProduct = async (productData) => {
+        setIsLoading(true);
+        try {
+            await axios.post("http://localhost:8080/admin/add", productData);
+            toast.success("Product added successfully");
+            fetchProducts();
+            return true;
+        } catch (error) {
+            toast.error("Failed to add product");
+            console.error("Add product error:", error);
+            return false;
+        } finally {
+            setIsLoading(false);
+        }
     };
 
-    const handleDelete = (id) => {
-        axios
-            .delete(`http://localhost:8080/admin/delete/${id}`)
-            .then(() => {
-                alert("Product deleted");
-                displayProductList();
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+    const handleUpdateProduct = async (id, productData) => {
+        setIsLoading(true);
+        try {
+            await axios.put(`http://localhost:8080/admin/update/${id}`, productData);
+            toast.success("Product updated successfully");
+            setEditingProduct(null);
+            fetchProducts();
+            return true;
+        } catch (error) {
+            toast.error("Failed to update product");
+            console.error("Update product error:", error);
+            return false;
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const handleDeleteProduct = async (id) => {
+        if (!window.confirm("Are you sure you want to delete this product?")) {
+            return;
+        }
+
+        setIsLoading(true);
+        try {
+            await axios.delete(`http://localhost:8080/admin/delete/${id}`);
+            toast.success("Product deleted successfully");
+            fetchProducts();
+        } catch (error) {
+            toast.error("Failed to delete product");
+            console.error("Delete product error:", error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const startEditing = (product) => {
+        setEditingProduct(product);
+    };
+
+    const cancelEditing = () => {
+        setEditingProduct(null);
     };
 
     return (
-        <div className="admin-container">
-            <h2>Add Product</h2>
-            <form className="product-form">
-                <label>Product Name:</label>
-                <input
-                    type="text"
-                    value={productName}
-                    onChange={(e) => setProductName(e.target.value)}
-                    required
-                />
-                <label>Product Price:</label>
-                <input
-                    type="text"
-                    value={productPrice}
-                    onChange={(e) => setProductPrice(e.target.value)}
-                    required
-                />
-                <label>Product Description:</label>
-                <input
-                    type="text"
-                    value={productDescription}
-                    onChange={(e) => setProductDescription(e.target.value)}
-                    required
-                />
-                <button type="button" onClick={Add}>
-                    Submit
-                </button>
-            </form>
+        <div className="admin-dashboard">
+            <div className="admin-header">
+                <h1>Admin Dashboard</h1>
+            </div>
 
-            <h2>Product List</h2>
-            <table className="product-table">
-                <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Price ₹</th>
-                    <th>Description</th>
-                    <th>Action</th>
-                </tr>
-                </thead>
-                <tbody>
-                {productData.map((product) => (
-                    <tr key={product.id}>
-                        <td>{product.productName}</td>
-                        <td>{product.productPrice}</td>
-                        <td>{product.productDescription}</td>
-                        <td>
-                            <button onClick={() => handleDelete(product.id)}>🗑️ Delete</button>
-                        </td>
-                    </tr>
-                ))}
-                </tbody>
-            </table>
+            <div className="admin-container">
+                <div className="admin-sidebar">
+                    <h2>Administration</h2>
+                    <ul className="admin-menu">
+                        <li className="active">Products</li>
+                        <li>Orders</li>
+                        <li>Customers</li>
+                        <li>Reports</li>
+                        <li>Settings</li>
+                    </ul>
+                </div>
+
+                <div className="admin-content">
+                    <section className="admin-section">
+                        <h2>{editingProduct ? "Update Product" : "Add New Product"}</h2>
+                        <ProductForm
+                            initialProduct={editingProduct}
+                            onSubmit={editingProduct
+                                ? (data) => handleUpdateProduct(editingProduct.id, data)
+                                : handleAddProduct}
+                            onCancel={cancelEditing}
+                            isLoading={isLoading}
+                        />
+                    </section>
+
+                    <section className="admin-section">
+                        <div className="section-header">
+                            <h2>Product Inventory</h2>
+                            {isLoading && <div className="loader"></div>}
+                        </div>
+                        <ProductTable
+                            products={productData}
+                            onEdit={startEditing}
+                            onDelete={handleDeleteProduct}
+                        />
+                    </section>
+                </div>
+            </div>
         </div>
     );
 }

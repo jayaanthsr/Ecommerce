@@ -17,4 +17,5 @@ public class ProductData {
     String ProductName;
     double ProductPrice;
     String ProductDescription;
+    private String productImage;
 }

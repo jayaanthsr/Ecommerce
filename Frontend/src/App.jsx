@@ -8,6 +8,8 @@ import { BrowserRouter as Router, useLocation } from "react-router-dom";
 import Navbar from "./component/Navbar.jsx";
 import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import './index.css'
+import Checkout from "./component/components/Checkout.jsx";
 
 
 function Signup() {
@@ -19,13 +21,14 @@ function Layout() {
     const showNavbar = location.pathname === "/";
     return (
         <>
-            {showNavbar && <Navbar />}
+            {/*{showNavbar && <Navbar />}*/}
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/admin" element={localStorage.getItem("isLogged")==="admin" && <Admin/>} />
+                <Route path="/admin" element={sessionStorage.getItem("isLogged")==="admin" && <Admin/>} />
                 <Route path="/cart" element={<Cart/>}></Route>
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
+                <Route path="/checkout" element={<Checkout/>}/>
             </Routes>
         </>
     );

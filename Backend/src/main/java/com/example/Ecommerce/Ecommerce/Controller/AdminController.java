@@ -2,10 +2,7 @@ package com.example.Ecommerce.Ecommerce.Controller;
 
 import com.example.Ecommerce.Ecommerce.Model.ProductData;
 import com.example.Ecommerce.Ecommerce.repo.EcommerceProductRepo;
-import com.example.Ecommerce.Ecommerce.repo.EcommerceRepoMongoDB;
-import com.mongodb.client.MongoClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
