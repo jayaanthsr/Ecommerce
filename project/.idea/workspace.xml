@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="88fe9edb-1dfb-4490-85f4-6a7a2e16adcb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/Ecommerce.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/Ecommerce/Ecommerce/Controller/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/Ecommerce/Ecommerce/Controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/Ecommerce/Ecommerce/Controller/loginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/Ecommerce/Ecommerce/EcommerceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/Ecommerce/Ecommerce/Model/LoginData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/Ecommerce/Ecommerce/Model/ProductData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/Ecommerce/Ecommerce/repo/EcommerceProductRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/Ecommerce/Ecommerce/repo/EcommerceRepoMongoDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/src/test/java/com/example/Ecommerce/Ecommerce/EcommerceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/eslint.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/Admin.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/Cart.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/Home.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/Navbar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/SignUp.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/components/Checkout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/components/Checkout.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/components/OrderConfirmation.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/components/ProductForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/components/ProductTable.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/login.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/styles/Admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/styles/Cart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/styles/Home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/styles/Navbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/styles/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/main.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/vite.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jayaanthsr"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/jayaanthsr/Ecommerce.git",
+    "accountId": "91367824-0892-492b-834f-1830cd8ed736"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2wffbxDUGBV3eQeO4XAfymbpd4X" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.EcommerceApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/jayaanth/Desktop/FAANG/Eco/Ecommerce",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/media/jayaanth/Windows-SSD/1softwares/ideaIU-2024.3.5/idea-IU-243.26053.27/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="EcommerceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ecommerce" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ecommerce.EcommerceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88fe9edb-1dfb-4490-85f4-6a7a2e16adcb" name="Changes" comment="" />
+      <created>1746437623726</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746437623726</updated>
+      <workItem from="1746437624834" duration="2084000" />
+      <workItem from="1746441105377" duration="4689000" />
+      <workItem from="1746506449048" duration="478000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/main.jsx" />
+        <option value="$PROJECT_DIR$/src/App.jsx" />
+      </list>
+    </option>
+  </component>
+</project>
