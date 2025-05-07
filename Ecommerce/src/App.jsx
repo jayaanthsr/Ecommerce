@@ -30,9 +30,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [userRole, setUserRole] = useState(null);
   // var navigate = useNavigate();
-  useEffect(() => {
-    localStorage.setItem('userRole', 'logout');
-  }, []);
+
   useEffect(() => {
     const role = localStorage.getItem('userRole');
     const username = localStorage.getItem('username');
@@ -86,11 +84,13 @@ function App() {
     setCartItems([]);
   };
 
+
   const handleLogout = () => {
-    setIsAuthenticated(false);
+    localStorage.setItem('userRole',null);
     setUserRole(null);
-    localStorage.setItem('userRole', 'logout');
+    setIsAuthenticated(false);
     localStorage.removeItem('username');
+    localStorage.removeItem('email');
   };
 
   const PrivateRoute = ({ children, allowedRoles }) => {
@@ -108,17 +108,25 @@ function App() {
   return (
     <Router>
       <div className="app">
-        {isAuthenticated && userRole === 'user' || userRole === 'logout' && (
-            <UserHeader
-                cartItems={cartItems}
-                onLogout={handleLogout}
-            />
-        )}
         {isAuthenticated && userRole === 'admin' && (
             <AdminHeader
                 onLogout={handleLogout}
             />
         )}
+        {(isAuthenticated && userRole === 'user') &&  (
+            <UserHeader
+                cartItems={cartItems}
+                onLogout={handleLogout}
+            />
+        )}
+        {
+            (!isAuthenticated) &&  (
+                <UserHeader
+                    cartItems={cartItems}
+                    onLogout={handleLogout}
+                />
+            )
+        }
 
 
         <main className="main-content">

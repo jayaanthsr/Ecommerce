@@ -49,14 +49,14 @@ const Cart = ({ cartItems, removeFromCart, updateQuantity }) => {
                   className="cart-item-image" 
                 />
                 <div className="cart-item-details">
-                  <Link to={`/product/${item.id}`} className="cart-item-name">
+                  <Link to={`/product/₹{item.id}`} className="cart-item-name">
                     {item.name}
                   </Link>
                   <div className="cart-item-category">{item.category}</div>
                 </div>
               </div>
               
-              <div className="cart-item-price">${item.price.toFixed(2)}</div>
+              <div className="cart-item-price">₹{item.price.toFixed(2)}</div>
               
               <div className="cart-item-quantity">
                 <div className="quantity-controls">
@@ -77,7 +77,7 @@ const Cart = ({ cartItems, removeFromCart, updateQuantity }) => {
               </div>
               
               <div className="cart-item-total">
-                ${(item.price * item.quantity).toFixed(2)}
+                ₹{(item.price * item.quantity).toFixed(2)}
               </div>
               
               <div className="cart-item-actions">
@@ -97,26 +97,26 @@ const Cart = ({ cartItems, removeFromCart, updateQuantity }) => {
           
           <div className="summary-row">
             <span>Subtotal</span>
-            <span>${subtotal.toFixed(2)}</span>
+            <span>₹{subtotal.toFixed(2)}</span>
           </div>
           
           <div className="summary-row">
             <span>Shipping</span>
             <span>
-              {shippingCost === 0 ? 'Free' : `$${shippingCost.toFixed(2)}`}
+              {shippingCost === 0 ? 'Free' : `₹₹{shippingCost.toFixed(2)}`}
             </span>
           </div>
           
           <div className="summary-row">
             <span>Tax (7%)</span>
-            <span>${tax.toFixed(2)}</span>
+            <span>₹{tax.toFixed(2)}</span>
           </div>
           
           <div className="summary-divider"></div>
           
           <div className="summary-row total">
             <span>Total</span>
-            <span>${total.toFixed(2)}</span>
+            <span>₹{total.toFixed(2)}</span>
           </div>
           
           <div className="summary-actions">
@@ -130,7 +130,7 @@ const Cart = ({ cartItems, removeFromCart, updateQuantity }) => {
           </div>
           
           <div className="cart-notes">
-            <p>Free shipping on orders over $50</p>
+            <p>Free shipping on orders over ₹50</p>
             <p>Easy 30-day returns</p>
             <p>Secure checkout process</p>
           </div>

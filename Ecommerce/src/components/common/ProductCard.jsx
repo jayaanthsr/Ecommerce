@@ -20,16 +20,16 @@ const ProductCard = ({ product, addToCart }) => {
       )}
       
       <div className="product-image-container">
-        <Link to={`/product/${id}`}>
+        <Link to={`/product/₹{id}`}>
           <img src={image} alt={name} className="product-image" />
         </Link>
       </div>
       
       <div className="product-content">
         <div className="product-category">{category}</div>
-        <Link to={`/product/${id}`} className="product-name">{name}</Link>
+        <Link to={`/product/₹{id}`} className="product-name">{name}</Link>
         <div className="product-description">{truncateDescription(description)}</div>
-        <div className="product-price">${price.toFixed(2)}</div>
+        <div className="product-price">₹{price.toFixed(2)}</div>
         
         <div className="product-actions">
           <div className="product-rating">

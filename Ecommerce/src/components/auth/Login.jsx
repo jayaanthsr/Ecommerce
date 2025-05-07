@@ -25,8 +25,9 @@ const Login = ({ setIsAuthenticated, setUserRole }) => {
 
     try {
       const response = await axios.post('http://localhost:8080/api/auth/login', formData);
-      localStorage.setItem('userRole', formData.username==='admin' ? 'admin' : 'user' );
+      localStorage.setItem('userRole', response.data.role);
       localStorage.setItem('username', response.data.username);
+      localStorage.setItem('email', response.data.email);
       setIsAuthenticated(true);
       setUserRole(response.data.role);
       

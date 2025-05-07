@@ -35,6 +35,7 @@ public class AuthController {
                 response.put("role", "user");
                 response.put("username", user.getUsername());
                 response.put("email", user.getEmail());
+                response.put("userId", user.getId());
                 return ResponseEntity.ok(response);
             }).orElse(ResponseEntity.status(401).body(Map.of("error", "Invalid credentials")));
 

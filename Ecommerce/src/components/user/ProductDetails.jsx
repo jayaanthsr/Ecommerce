@@ -136,10 +136,10 @@ const ProductDetails = ({ addToCart }) => {
               {product.images.map((image, index) => (
                 <div 
                   key={index} 
-                  className={`thumbnail ${activeImage === index ? 'active' : ''}`}
+                  className={`thumbnail ₹{activeImage === index ? 'active' : ''}`}
                   onClick={() => selectImage(index)}
                 >
-                  <img src={image} alt={`${product.name} - Image ${index + 1}`} />
+                  <img src={image} alt={`₹{product.name} - Image ₹{index + 1}`} />
                 </div>
               ))}
             </div>
@@ -160,10 +160,10 @@ const ProductDetails = ({ addToCart }) => {
           </div>
           
           <div className="product-price-container">
-            <div className="product-price">${discountedPrice.toFixed(2)}</div>
+            <div className="product-price">₹{discountedPrice.toFixed(2)}</div>
             
             {originalPrice && (
-              <div className="product-original-price">${originalPrice.toFixed(2)}</div>
+              <div className="product-original-price">₹{originalPrice.toFixed(2)}</div>
             )}
           </div>
           
@@ -185,7 +185,7 @@ const ProductDetails = ({ addToCart }) => {
           )}
           
           <div className="product-stock">
-            <span className={`stock-indicator ${product.stock > 0 ? 'in-stock' : 'out-of-stock'}`}>
+            <span className={`stock-indicator ₹{product.stock > 0 ? 'in-stock' : 'out-of-stock'}`}>
               {product.stock > 0 ? 'In Stock' : 'Out of Stock'}
             </span>
             
@@ -226,7 +226,7 @@ const ProductDetails = ({ addToCart }) => {
               <Truck size={20} />
               <div className="perk-text">
                 <strong>Free Shipping</strong>
-                <span>On orders over $50</span>
+                <span>On orders over ₹50</span>
               </div>
             </div>
             

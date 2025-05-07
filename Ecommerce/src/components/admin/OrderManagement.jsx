@@ -38,7 +38,23 @@ const OrderManagement = () => {
     
     fetchOrders();
   }, []);
-  
+
+  const updateOrderStatus = async (orderId, newStatus) => {
+    try {
+      await orderApi.updateOrderStatus(orderId, newStatus);
+
+      // Update order status locally
+      setOrders(prevOrders =>
+          prevOrders.map(order =>
+              order.id === orderId ? { ...order, status: newStatus } : order
+          )
+      );
+    } catch (error) {
+      console.error('Error updating order status:', error);
+    }
+  };
+
+
   // Filter and sort orders
   const filteredAndSortedOrders = () => {
     let result = [...orders];
@@ -115,24 +131,17 @@ const OrderManagement = () => {
     });
   };
   
-  const updateOrderStatus = async (orderId, newStatus) => {
-    try {
-      /*
-      await orderApi.updateOrderStatus(orderId, newStatus);
-      */
-      
-      // Update in local state
-      setOrders(
-        orders.map(order => 
-          order.id === orderId
-            ? { ...order, status: newStatus }
-            : order
-        )
-      );
-    } catch (error) {
-      console.error('Error updating order status:', error);
-    }
-  };
+  // const updateOrderStatus = async (orderId, newStatus) => {
+  //   try {
+  //
+  //     await orderApi.updateOrderStatus(orderId, newStatus);
+  //
+  //
+  //
+  //   } catch (error) {
+  //     console.error('Error updating order status:', error);
+  //   }
+  // };
   
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };

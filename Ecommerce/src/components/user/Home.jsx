@@ -11,7 +11,7 @@ const Home = ({ addToCart }) => {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -24,44 +24,44 @@ const Home = ({ addToCart }) => {
         setLoading(false);
       }
     };
-    
+
     fetchProducts();
   }, []);
-  
+
   useEffect(() => {
     let result = [...products];
-    
+
     // Filter by category
     if (selectedCategory !== 'all') {
-      result = result.filter(product => 
+      result = result.filter(product =>
         product.category.toLowerCase() === selectedCategory.toLowerCase());
     }
 
     // Filter by search query
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
-      result = result.filter(product => 
-        product.name.toLowerCase().includes(query) || 
+      result = result.filter(product =>
+        product.name.toLowerCase().includes(query) ||
         product.description.toLowerCase().includes(query) ||
         product.category.toLowerCase().includes(query)
       );
     }
-    
+
     setFilteredProducts(result);
   }, [selectedCategory, searchQuery, products]);
-  
+
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
   };
-  
+
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
   };
-  
+
   if (loading) {
     return <div className="loading">Loading products...</div>;
   }
-  
+
   return (
     <div className="home-container">
       <div className="hero-section">
@@ -70,7 +70,7 @@ const Home = ({ addToCart }) => {
           <p className="hero-subtitle">Discover amazing products at unbeatable prices</p>
         </div>
       </div>
-      
+
       <div className="search-bar">
         <div className="search-input-container">
           <Search size={20} className="search-icon" />
@@ -83,16 +83,16 @@ const Home = ({ addToCart }) => {
           />
         </div>
       </div>
-      
-      <CategoryList 
-        onSelectCategory={handleCategorySelect} 
-        selectedCategory={selectedCategory} 
+
+      <CategoryList
+        onSelectCategory={handleCategorySelect}
+        selectedCategory={selectedCategory}
       />
-      
+
       <h2 className="section-title">
         {selectedCategory === 'all' ? 'All Products' : selectedCategory}
       </h2>
-      
+
       {filteredProducts.length === 0 ? (
         <div className="no-products">
           <p>No products found. Try a different search or category.</p>
@@ -100,36 +100,36 @@ const Home = ({ addToCart }) => {
       ) : (
         <div className="product-grid">
           {filteredProducts.map(product => (
-            <ProductCard 
-              key={product.id} 
-              product={product} 
-              addToCart={addToCart} 
+            <ProductCard
+              key={product.id}
+              product={product}
+              addToCart={addToCart}
             />
           ))}
         </div>
       )}
-      
+
       <div className="featured-section">
         <h2 className="section-title">Why Shop With Us</h2>
         <div className="features-grid">
           <div className="feature-card">
             <div className="feature-icon">🚚</div>
             <h3 className="feature-title">Free Shipping</h3>
-            <p className="feature-description">On orders over $50</p>
+            <p className="feature-description">On orders over ₹50</p>
           </div>
-          
+
           <div className="feature-card">
             <div className="feature-icon">⏱️</div>
             <h3 className="feature-title">Easy Returns</h3>
             <p className="feature-description">30 day return policy</p>
           </div>
-          
+
           <div className="feature-card">
             <div className="feature-icon">🔒</div>
             <h3 className="feature-title">Secure Payment</h3>
             <p className="feature-description">Safe & encrypted</p>
           </div>
-          
+
           <div className="feature-card">
             <div className="feature-icon">💬</div>
             <h3 className="feature-title">24/7 Support</h3>

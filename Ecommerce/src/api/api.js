@@ -28,7 +28,7 @@ export const productApi = {
 export const orderApi = {
   placeOrder: (order) => api.post('/orders', order),
   getOrderById: (id) => api.get(`/orders/${id}`),
-  getUserOrders: (userId) => api.get(`/orders/user/${userId}`),
+  getUserOrders: (emailId) => api.get(`/orders/user/${emailId}`),
   
   // Admin APIs
   getAllOrders: () => api.get('/orders'),

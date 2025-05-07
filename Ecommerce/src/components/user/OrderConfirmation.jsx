@@ -87,10 +87,10 @@ const OrderConfirmation = () => {
                   <div className="order-item-name">{item.name}</div>
                   <div className="order-item-meta">
                     <span className="order-item-quantity">Qty: {item.quantity}</span>
-                    <span className="order-item-price">${item.price.toFixed(2)}</span>
+                    <span className="order-item-price">₹{item.price.toFixed(2)}</span>
                   </div>
                 </div>
-                <div className="order-item-total">${(item.price * item.quantity).toFixed(2)}</div>
+                <div className="order-item-total">₹{(item.price * item.quantity).toFixed(2)}</div>
               </div>
             ))}
           </div>
@@ -100,19 +100,19 @@ const OrderConfirmation = () => {
           <div className="order-totals">
             <div className="totals-row">
               <span>Subtotal</span>
-              <span>${order.subtotal.toFixed(2)}</span>
+              <span>₹{order.subtotal.toFixed(2)}</span>
             </div>
             <div className="totals-row">
               <span>Shipping</span>
-              <span>{order.shipping === 0 ? 'Free' : `$${order.shipping.toFixed(2)}`}</span>
+              <span>{order.shipping === 0 ? 'Free' : `₹₹{order.shipping.toFixed(2)}`}</span>
             </div>
             <div className="totals-row">
               <span>Tax</span>
-              <span>${order.tax.toFixed(2)}</span>
+              <span>₹{order.tax.toFixed(2)}</span>
             </div>
             <div className="totals-row total">
               <span>Total</span>
-              <span>${order.total.toFixed(2)}</span>
+              <span>₹{order.total.toFixed(2)}</span>
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@ const OrderConfirmation = () => {
             
             <div className="payment-amount">
               <div className="payment-amount-label">Amount Paid:</div>
-              <div className="payment-amount-value">${order.total.toFixed(2)}</div>
+              <div className="payment-amount-value">₹{order.total.toFixed(2)}</div>
             </div>
           </div>
         </div>

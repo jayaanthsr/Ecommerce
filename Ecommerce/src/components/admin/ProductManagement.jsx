@@ -33,10 +33,16 @@ const ProductManagement = () => {
 
         const productsResponse = await productApi.getAllProducts();
         setProducts(productsResponse.data);
-        
-        const categoriesResponse = await categoryApi.getAllCategories();
-        setCategories(categoriesResponse.data);
+        const dummyCategories = [
+            { id: 1, name: 'TV' },
+            { id: 2, name: 'Sound' },
+            { id: 3, name: 'Radio' },
+            { id: 4, name: 'Remote' },
+            { id: 5, name: 'Dish' },
+            { id: 6, name: 'Setup Box' },
+          ];
 
+          setCategories(dummyCategories);
         
 
 
@@ -166,12 +172,9 @@ const ProductManagement = () => {
       };
       
       if (currentProduct) {
-        // Update existing product
 
         await productApi.updateProduct(currentProduct.id, productData);
 
-        
-        // Update in local state
 
       } else {
         // Add new product
@@ -194,11 +197,8 @@ const ProductManagement = () => {
   const handleDeleteProduct = async (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
       try {
-
+        console.log(id);
         await productApi.deleteProduct(id);
-
-        
-        // Remove from local state
 
       } catch (error) {
         console.error('Error deleting product:', error);
@@ -258,7 +258,7 @@ const ProductManagement = () => {
             <tr>
               <th className="product-image-col">Image</th>
               <th 
-                className={`sortable ${sortField === 'name' ? 'active' : ''}`}
+                className={`sortable ₹{sortField === 'name' ? 'active' : ''}`}
                 onClick={() => handleSort('name')}
               >
                 <div className="sort-header">
@@ -269,7 +269,7 @@ const ProductManagement = () => {
                 </div>
               </th>
               <th 
-                className={`sortable ${sortField === 'category' ? 'active' : ''}`}
+                className={`sortable ₹{sortField === 'category' ? 'active' : ''}`}
                 onClick={() => handleSort('category')}
               >
                 <div className="sort-header">
@@ -280,7 +280,7 @@ const ProductManagement = () => {
                 </div>
               </th>
               <th 
-                className={`sortable ${sortField === 'price' ? 'active' : ''}`}
+                className={`sortable ₹{sortField === 'price' ? 'active' : ''}`}
                 onClick={() => handleSort('price')}
               >
                 <div className="sort-header">
@@ -291,7 +291,7 @@ const ProductManagement = () => {
                 </div>
               </th>
               <th 
-                className={`sortable ${sortField === 'stock' ? 'active' : ''}`}
+                className={`sortable ₹{sortField === 'stock' ? 'active' : ''}`}
                 onClick={() => handleSort('stock')}
               >
                 <div className="sort-header">
@@ -316,9 +316,9 @@ const ProductManagement = () => {
                   <div className="product-id">ID: {product.id}</div>
                 </td>
                 <td>{product.category}</td>
-                <td>${product.price.toFixed(2)}</td>
+                <td>₹{product.price.toFixed(2)}</td>
                 <td>
-                  <span className={`stock-badge ${product.stock < 10 ? 'low-stock' : ''}`}>
+                  <span className={`stock-badge ₹{product.stock < 10 ? 'low-stock' : ''}`}>
                     {product.stock}
                   </span>
                 </td>
@@ -391,7 +391,7 @@ const ProductManagement = () => {
               
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="price">Price ($)</label>
+                  <label htmlFor="price">Price (₹)</label>
                   <input
                     type="number"
                     id="price"

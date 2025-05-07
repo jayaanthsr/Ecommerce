@@ -22,7 +22,7 @@ const UserHeader = ({ cartItems, onLogout }) => {
                         <ShoppingCart size={20} />
                         {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
                     </NavLink>
-                    {userRole === 'user'
+                    {userRole==='user'
                         ? <button onClick={onLogout} className="nav-link logout-btn">Logout</button>
                         : <NavLink to="/login" className="nav-link logout-btn">Login</NavLink>
                     }

@@ -70,7 +70,7 @@ const Checkout = ({ cartItems, clearCart }) => {
     // Validate payment info
     if (!formData.cardNumber) {
       newErrors.cardNumber = 'Card number is required';
-    } else if (!/^\d{16}$/.test(formData.cardNumber.replace(/\s/g, ''))) {
+    } else if (!/^\d{16}₹/.test(formData.cardNumber.replace(/\s/g, ''))) {
       newErrors.cardNumber = 'Card number must be 16 digits';
     }
     
@@ -78,13 +78,13 @@ const Checkout = ({ cartItems, clearCart }) => {
     
     if (!formData.cardExpiry) {
       newErrors.cardExpiry = 'Expiry date is required';
-    } else if (!/^\d{2}\/\d{2}$/.test(formData.cardExpiry)) {
+    } else if (!/^\d{2}\/\d{2}₹/.test(formData.cardExpiry)) {
       newErrors.cardExpiry = 'Expiry date must be in MM/YY format';
     }
     
     if (!formData.cardCvv) {
       newErrors.cardCvv = 'CVV is required';
-    } else if (!/^\d{3,4}$/.test(formData.cardCvv)) {
+    } else if (!/^\d{3,4}₹/.test(formData.cardCvv)) {
       newErrors.cardCvv = 'CVV must be 3 or 4 digits';
     }
     
@@ -129,18 +129,15 @@ const Checkout = ({ cartItems, clearCart }) => {
         total
       };
       
-      // Using mock data since backend isn't ready
-      /*
+
       const response = await orderApi.placeOrder(orderData);
       const orderId = response.data.id;
-      */
-      
-      // Mock order ID for now
-      const orderId = 'ORD-' + Math.floor(100000 + Math.random() * 900000);
+
+
       
       // Clear cart and navigate to order confirmation
       clearCart();
-      navigate(`/order-confirmation/${orderId}`);
+      navigate(`/order-confirmation/₹{orderId}`);
       
     } catch (error) {
       console.error('Error placing order:', error);
@@ -196,7 +193,7 @@ const Checkout = ({ cartItems, clearCart }) => {
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleChange}
-                    className={`form-input ${errors.firstName ? 'error' : ''}`}
+                    className={`form-input ₹{errors.firstName ? 'error' : ''}`}
                   />
                   {errors.firstName && <div className="form-error">{errors.firstName}</div>}
                 </div>
@@ -209,7 +206,7 @@ const Checkout = ({ cartItems, clearCart }) => {
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className={`form-input ${errors.lastName ? 'error' : ''}`}
+                    className={`form-input ₹{errors.lastName ? 'error' : ''}`}
                   />
                   {errors.lastName && <div className="form-error">{errors.lastName}</div>}
                 </div>
@@ -223,7 +220,7 @@ const Checkout = ({ cartItems, clearCart }) => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`form-input ${errors.email ? 'error' : ''}`}
+                  className={`form-input ₹{errors.email ? 'error' : ''}`}
                 />
                 {errors.email && <div className="form-error">{errors.email}</div>}
               </div>
@@ -240,7 +237,7 @@ const Checkout = ({ cartItems, clearCart }) => {
                   name="address"
                   value={formData.address}
                   onChange={handleChange}
-                  className={`form-input ${errors.address ? 'error' : ''}`}
+                  className={`form-input ₹{errors.address ? 'error' : ''}`}
                 />
                 {errors.address && <div className="form-error">{errors.address}</div>}
               </div>
@@ -254,7 +251,7 @@ const Checkout = ({ cartItems, clearCart }) => {
                     name="city"
                     value={formData.city}
                     onChange={handleChange}
-                    className={`form-input ${errors.city ? 'error' : ''}`}
+                    className={`form-input ₹{errors.city ? 'error' : ''}`}
                   />
                   {errors.city && <div className="form-error">{errors.city}</div>}
                 </div>
@@ -267,7 +264,7 @@ const Checkout = ({ cartItems, clearCart }) => {
                     name="zipCode"
                     value={formData.zipCode}
                     onChange={handleChange}
-                    className={`form-input ${errors.zipCode ? 'error' : ''}`}
+                    className={`form-input ₹{errors.zipCode ? 'error' : ''}`}
                   />
                   {errors.zipCode && <div className="form-error">{errors.zipCode}</div>}
                 </div>
@@ -280,13 +277,13 @@ const Checkout = ({ cartItems, clearCart }) => {
                   name="country"
                   value={formData.country}
                   onChange={handleChange}
-                  className={`form-input ${errors.country ? 'error' : ''}`}
+                  className={`form-input ₹{errors.country ? 'error' : ''}`}
                 >
                   <option value="">Select a country</option>
-                  <option value="US">United States</option>
-                  <option value="CA">Canada</option>
-                  <option value="UK">United Kingdom</option>
-                  <option value="AU">Australia</option>
+                  <option value="India">United States</option>
+                  <option value="PAK">Pakistan</option>
+                  <option value="CHINA">China</option>
+                  <option value="JPN">Japan</option>
                 </select>
                 {errors.country && <div className="form-error">{errors.country}</div>}
               </div>
@@ -306,7 +303,7 @@ const Checkout = ({ cartItems, clearCart }) => {
                     placeholder="1234 5678 9012 3456"
                     value={formData.cardNumber}
                     onChange={handleChange}
-                    className={`form-input ${errors.cardNumber ? 'error' : ''}`}
+                    className={`form-input ₹{errors.cardNumber ? 'error' : ''}`}
                   />
                 </div>
                 {errors.cardNumber && <div className="form-error">{errors.cardNumber}</div>}
@@ -320,7 +317,7 @@ const Checkout = ({ cartItems, clearCart }) => {
                   name="cardName"
                   value={formData.cardName}
                   onChange={handleChange}
-                  className={`form-input ${errors.cardName ? 'error' : ''}`}
+                  className={`form-input ₹{errors.cardName ? 'error' : ''}`}
                 />
                 {errors.cardName && <div className="form-error">{errors.cardName}</div>}
               </div>
@@ -335,7 +332,7 @@ const Checkout = ({ cartItems, clearCart }) => {
                     placeholder="MM/YY"
                     value={formData.cardExpiry}
                     onChange={handleChange}
-                    className={`form-input ${errors.cardExpiry ? 'error' : ''}`}
+                    className={`form-input ₹{errors.cardExpiry ? 'error' : ''}`}
                   />
                   {errors.cardExpiry && <div className="form-error">{errors.cardExpiry}</div>}
                 </div>
@@ -349,7 +346,7 @@ const Checkout = ({ cartItems, clearCart }) => {
                     placeholder="123"
                     value={formData.cardCvv}
                     onChange={handleChange}
-                    className={`form-input ${errors.cardCvv ? 'error' : ''}`}
+                    className={`form-input ₹{errors.cardCvv ? 'error' : ''}`}
                   />
                   {errors.cardCvv && <div className="form-error">{errors.cardCvv}</div>}
                 </div>
@@ -380,7 +377,7 @@ const Checkout = ({ cartItems, clearCart }) => {
                 </div>
                 <div className="summary-item-details">
                   <div className="summary-item-name">{item.name}</div>
-                  <div className="summary-item-price">${(item.price * item.quantity).toFixed(2)}</div>
+                  <div className="summary-item-price">₹{(item.price * item.quantity).toFixed(2)}</div>
                 </div>
               </div>
             ))}
@@ -390,26 +387,26 @@ const Checkout = ({ cartItems, clearCart }) => {
           
           <div className="summary-row">
             <span>Subtotal</span>
-            <span>${subtotal.toFixed(2)}</span>
+            <span>₹{subtotal.toFixed(2)}</span>
           </div>
           
           <div className="summary-row">
             <span>Shipping</span>
             <span>
-              {shippingCost === 0 ? 'Free' : `$${shippingCost.toFixed(2)}`}
+              {shippingCost === 0 ? 'Free' : `₹₹{shippingCost.toFixed(2)}`}
             </span>
           </div>
           
           <div className="summary-row">
             <span>Tax (7%)</span>
-            <span>${tax.toFixed(2)}</span>
+            <span>₹{tax.toFixed(2)}</span>
           </div>
           
           <div className="summary-divider"></div>
           
           <div className="summary-row total">
             <span>Total</span>
-            <span>${total.toFixed(2)}</span>
+            <span>₹{total.toFixed(2)}</span>
           </div>
           
           <div className="checkout-badges">

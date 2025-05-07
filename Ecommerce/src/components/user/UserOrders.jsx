@@ -8,13 +8,16 @@ const UserOrders = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
-  
+
   useEffect(() => {
     const fetchOrders = async () => {
       try {
+        const email = localStorage.getItem('email'); // Make sure email is stored
+        console.log("Email:", email);
 
-        const response = await orderApi.getUserOrders();
+        const response = await orderApi.getUserOrders(email); // Correct API call
         setOrders(response.data);
+        console.log("Orders:", response.data);
 
       } catch (error) {
         console.error('Error fetching orders:', error);
@@ -22,10 +25,11 @@ const UserOrders = () => {
         setLoading(false);
       }
     };
-    
+
     fetchOrders();
   }, []);
-  
+
+
   const filteredOrders = orders.filter(order => 
     order.orderNumber.toLowerCase().includes(searchQuery.toLowerCase()) ||
     order.status.toLowerCase().includes(searchQuery.toLowerCase())
@@ -106,17 +110,17 @@ const UserOrders = () => {
                 
                 <div className="order-status">
                   <div className="order-label">Status:</div>
-                  <div className={`order-value ${getStatusClass(order.status)}`}>
+                  <div className={`order-value ₹{getStatusClass(order.status)}`}>
                     {order.status}
                   </div>
                 </div>
                 
                 <div className="order-total">
                   <div className="order-label">Total:</div>
-                  <div className="order-value">${order.total.toFixed(2)}</div>
+                  <div className="order-value">₹{order.total.toFixed(2)}</div>
                 </div>
                 
-                <Link to={`/order-confirmation/${order.id}`} className="order-details-link">
+                <Link to={`/order-confirmation/₹{order.id}`} className="order-details-link">
                   <span>Details</span>
                   <ChevronRight size={16} />
                 </Link>
@@ -124,7 +128,7 @@ const UserOrders = () => {
               
               <div className="order-items-preview">
                 {order.items.slice(0, 3).map((item, index) => (
-                  <div key={`${order.id}-${item.id}`} className="order-item-thumbnail">
+                  <div key={`₹{order.id}-₹{item.id}`} className="order-item-thumbnail">
                     <img src={item.image} alt={item.name} />
                   </div>
                 ))}
@@ -137,7 +141,7 @@ const UserOrders = () => {
               </div>
               
               <div className="order-actions">
-                <Link to={`/order-confirmation/${order.id}`} className="btn btn-secondary btn-sm">
+                <Link to={`/order-confirmation/₹{order.id}`} className="btn btn-secondary btn-sm">
                   <FileText size={16} />
                   View Order
                 </Link>

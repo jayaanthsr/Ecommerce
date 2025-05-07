@@ -4,30 +4,25 @@ import { categoryApi } from '../../api/api';
 const CategoryList = ({ onSelectCategory, selectedCategory }) => {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
-  
+
   useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        // Using mock data until backend is ready
+    // Instead of fetching from the API, use hardcoded dummy categories
+    const dummyCategories = [
+      { id: 1, name: 'TV' },
+      { id: 2, name: 'Sound' },
+      { id: 3, name: 'Radio' },
+      { id: 4, name: 'Remote' },
+      { id: 5, name: 'Dish' },
+      { id: 6, name: 'Setup Box' },
+    ];
 
-        const response = await categoryApi.getAllCategories();
-        setCategories(response.data);
-
-
-      } catch (error) {
-        console.error('Error fetching categories:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    
-    fetchCategories();
+    setCategories(dummyCategories);
   }, []);
-  
+
   if (loading) {
     return <div>Loading categories...</div>;
   }
-  
+
   return (
     <div className="category-list">
       <h3 className="category-title">Categories</h3>
