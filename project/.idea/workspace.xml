@@ -5,59 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88fe9edb-1dfb-4490-85f4-6a7a2e16adcb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/Ecommerce.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/Ecommerce/Ecommerce/Controller/AdminController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/Ecommerce/Ecommerce/Controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/Ecommerce/Ecommerce/Controller/loginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/Ecommerce/Ecommerce/EcommerceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/Ecommerce/Ecommerce/Model/LoginData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/Ecommerce/Ecommerce/Model/ProductData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/Ecommerce/Ecommerce/repo/EcommerceProductRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/com/example/Ecommerce/Ecommerce/repo/EcommerceRepoMongoDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/test/java/com/example/Ecommerce/Ecommerce/EcommerceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/eslint.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/Admin.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/Cart.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/Home.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/Navbar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/SignUp.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/components/Checkout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/components/Checkout.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/components/OrderConfirmation.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/components/ProductForm.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/components/ProductTable.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/login.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/styles/Admin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/styles/Cart.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/styles/Home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/styles/Navbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/component/styles/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/components/admin/AdminDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/components/admin/AdminDashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/components/admin/OrderManagement.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/components/admin/OrderManagement.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/components/common/AdminHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/components/common/AdminHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/components/common/CategoryList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/components/common/CategoryList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/components/common/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/components/common/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/components/common/ProductCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/components/common/ProductCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/components/common/UserHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/components/common/UserHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/components/user/Checkout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/components/user/Checkout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/components/user/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/components/user/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/components/user/OrderConfirmation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/components/user/OrderConfirmation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/components/user/UserOrders.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/components/user/UserOrders.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/main/java/com/example/ecommerce/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/main/java/com/example/ecommerce/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/main/java/com/example/ecommerce/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/main/java/com/example/ecommerce/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/main/java/com/example/ecommerce/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/main/java/com/example/ecommerce/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/styles/Cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/styles/Cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/styles/CategoryList.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/styles/CategoryList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/styles/Checkout.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/styles/Checkout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/styles/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/styles/Footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/styles/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/styles/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/styles/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/styles/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/styles/ProductCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/styles/ProductCard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/src/styles/ProductDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/src/styles/ProductDetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/EcommerceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/EcommerceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/controller/OrderController$OrderStatusUpdate.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/controller/OrderController$OrderStatusUpdate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/controller/StatsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/controller/StatsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/model/Order$Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/model/Order$Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/model/Order$OrderItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/model/Order$OrderItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/model/Order$Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/model/Order$Payment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/model/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/model/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/repository/OrderRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/repository/OrderRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/repository/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ecommerce/target/classes/com/example/ecommerce/repository/UserRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,18 +65,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jayaanthsr"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jayaanthsr&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/jayaanthsr/Ecommerce.git",
-    "accountId": "91367824-0892-492b-834f-1830cd8ed736"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jayaanthsr/Ecommerce.git&quot;,
+    &quot;accountId&quot;: &quot;91367824-0892-492b-834f-1830cd8ed736&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -101,6 +92,7 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.EcommerceApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -142,6 +134,7 @@
       <workItem from="1746437624834" duration="2084000" />
       <workItem from="1746441105377" duration="4689000" />
       <workItem from="1746506449048" duration="478000" />
+      <workItem from="1747045227052" duration="19000" />
     </task>
     <servers />
   </component>

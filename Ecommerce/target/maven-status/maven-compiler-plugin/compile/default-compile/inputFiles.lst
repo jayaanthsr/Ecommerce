@@ -1,0 +1,12 @@
+/home/jayaanth/Desktop/FAANG/Eco/Ecommerce/src/main/java/com/example/ecommerce/controller/OrderController.java
+/home/jayaanth/Desktop/FAANG/Eco/Ecommerce/src/main/java/com/example/ecommerce/model/Order.java
+/home/jayaanth/Desktop/FAANG/Eco/Ecommerce/src/main/java/com/example/ecommerce/controller/StatsController.java
+/home/jayaanth/Desktop/FAANG/Eco/Ecommerce/src/main/java/com/example/ecommerce/repository/ProductRepository.java
+/home/jayaanth/Desktop/FAANG/Eco/Ecommerce/src/main/java/com/example/ecommerce/model/Product.java
+/home/jayaanth/Desktop/FAANG/Eco/Ecommerce/src/main/java/com/example/ecommerce/model/User.java
+/home/jayaanth/Desktop/FAANG/Eco/Ecommerce/src/main/java/com/example/ecommerce/repository/UserRepository.java
+/home/jayaanth/Desktop/FAANG/Eco/Ecommerce/src/main/java/com/example/ecommerce/controller/ProductController.java
+/home/jayaanth/Desktop/FAANG/Eco/Ecommerce/src/main/java/com/example/ecommerce/controller/AuthController.java
+/home/jayaanth/Desktop/FAANG/Eco/Ecommerce/src/main/java/com/example/ecommerce/EcommerceApplication.java
+/home/jayaanth/Desktop/FAANG/Eco/Ecommerce/src/main/java/com/example/ecommerce/repository/OrderRepository.java
+/home/jayaanth/Desktop/FAANG/Eco/Ecommerce/src/main/java/com/example/ecommerce/config/WebConfig.java
