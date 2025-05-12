@@ -1,43 +1,46 @@
-import React, { useEffect, useState } from 'react';
-import { categoryApi } from '../../api/api';
+
+import React, { useRef, useEffect } from 'react';
+import '../../styles/CategoryList.css';
 
 const CategoryList = ({ onSelectCategory, selectedCategory }) => {
-  const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const categories = ['all', 'Dish','TV','Remote','setup box'];
+  const listRef = useRef(null);
+  const activeItemRef = useRef(null);
 
   useEffect(() => {
-    // Instead of fetching from the API, use hardcoded dummy categories
-    const dummyCategories = [
-      { id: 1, name: 'TV' },
-      { id: 2, name: 'Sound' },
-      { id: 3, name: 'Radio' },
-      { id: 4, name: 'Remote' },
-      { id: 5, name: 'Dish' },
-      { id: 6, name: 'Setup Box' },
-    ];
+    // Scroll active item into view when selected category changes
+    if (activeItemRef.current && listRef.current) {
+      const list = listRef.current;
+      const activeItem = activeItemRef.current;
 
-    setCategories(dummyCategories);
-  }, []);
+      const listRect = list.getBoundingClientRect();
+      const activeRect = activeItem.getBoundingClientRect();
 
-  if (loading) {
-    return <div>Loading categories...</div>;
-  }
+      const isVisible =
+          activeRect.left >= listRect.left &&
+          activeRect.right <= listRect.right;
+
+      if (!isVisible) {
+        const scrollPosition = activeItem.offsetLeft - list.offsetLeft - (list.clientWidth / 2) + (activeItem.clientWidth / 2);
+        list.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+      }
+    }
+  }, [selectedCategory]);
 
   return (
-    <div className="category-list">
-      <h3 className="category-title">Categories</h3>
-      <div className="category-items">
-        {categories.map(category => (
-          <button
-            key={category.id}
-            className={`category-item ${selectedCategory === category.slug ? 'active' : ''}`}
-            onClick={() => onSelectCategory(category.slug)}
-          >
-            {category.name}
-          </button>
+      <div className="category-list" ref={listRef}>
+        {categories.map((category) => (
+            <button
+                key={category}
+                className={`category-item ${selectedCategory === category ? 'active' : ''}`}
+                onClick={() => onSelectCategory(category)}
+                ref={selectedCategory === category ? activeItemRef : null}
+                style={{padding:'10px'}}
+            >
+              {category.charAt(0).toUpperCase() + category.slice(1)}
+            </button>
         ))}
       </div>
-    </div>
   );
 };
 

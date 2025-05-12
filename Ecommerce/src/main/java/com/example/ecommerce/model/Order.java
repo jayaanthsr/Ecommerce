@@ -1,6 +1,8 @@
 package com.example.ecommerce.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.math.BigDecimal;
@@ -8,6 +10,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Document(collection = "orders")
 public class Order {
     @Id
@@ -23,6 +27,9 @@ public class Order {
     private LocalDateTime orderDate;
     private LocalDateTime estimatedDelivery;
     private Payment payment;
+    private String PaymentStatus;
+    private String PaymentMethod;
+    private String PaymentId;
 
     @Data
     public static class Customer {

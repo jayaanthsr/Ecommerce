@@ -77,9 +77,9 @@ const AdminDashboard = () => {
                           <td>{order.orderNumber}</td>
                           <td>{order.customer.firstName} {order.customer.lastName}</td>
                           <td>{new Date(order.orderDate).toLocaleString()}</td>
-                          <td>${order.total.toFixed(2)}</td>
+                          <td>₹{order.total.toFixed(2)}</td>
                           <td>
-                        <span className={`order-status ${getStatusClass(order.status)}`}>
+                        <span className={`order-status ₹{getStatusClass(order.status)}`}>
                           {order.status}
                         </span>
                           </td>

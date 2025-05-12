@@ -26,10 +26,13 @@ export const productApi = {
 
 // Order API
 export const orderApi = {
+  createRazorpayOrder: (data) => axios.post('/api/orders/razorpay/order', data),
+  verifyRazorpayPayment: (data) => axios.post('/api/orders/razorpay/verify', data),
   placeOrder: (order) => api.post('/orders', order),
   getOrderById: (id) => api.get(`/orders/${id}`),
   getUserOrders: (emailId) => api.get(`/orders/user/${emailId}`),
-  
+  sendOrderConfirmationEmail: (emailData) => api.post("/payment/send-email", emailData),
+
   // Admin APIs
   getAllOrders: () => api.get('/orders'),
   updateOrderStatus: (id, status) => api.put(`/orders/${id}/status`, { status })
@@ -51,9 +54,14 @@ export const statsApi = {
   getProductStats: () => api.get('/stats/products')
 };
 
+export const emailApi = {
+  sendEmail: () => api.get('/email/{}'),
+};
+
 export default {
   productApi,
   orderApi,
+  emailApi,
   categoryApi,
   statsApi
 };

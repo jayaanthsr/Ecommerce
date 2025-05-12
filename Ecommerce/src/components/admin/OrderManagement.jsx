@@ -285,7 +285,7 @@ const OrderManagement = () => {
                     <div className="customer-email">{order.customer.email}</div>
                   </td>
                   <td>{formatDate(order.orderDate)}</td>
-                  <td className="order-total">${order.total.toFixed(2)}</td>
+                  <td className="order-total">₹{order.total.toFixed(2)}</td>
                   <td>
                     <span className={`order-status ${getStatusClass(order.status)}`}>
                       {order.status}
@@ -352,10 +352,10 @@ const OrderManagement = () => {
                             <h3>Payment Details</h3>
                             <div className="details-content">
                               <p><strong>Payment Method:</strong> {order.paymentMethod}</p>
-                              <p><strong>Subtotal:</strong> ${order.subtotal.toFixed(2)}</p>
-                              <p><strong>Shipping:</strong> ${order.shipping.toFixed(2)}</p>
-                              <p><strong>Tax:</strong> ${order.tax.toFixed(2)}</p>
-                              <p><strong>Total:</strong> ${order.total.toFixed(2)}</p>
+                              <p><strong>Subtotal:</strong> ₹{order.subtotal.toFixed(2)}</p>
+                              <p><strong>Shipping:</strong> ₹{order.shipping.toFixed(2)}</p>
+                              <p><strong>Tax:</strong> ₹{order.tax.toFixed(2)}</p>
+                              <p><strong>Total:</strong> ₹{order.total.toFixed(2)}</p>
                             </div>
                           </div>
                         </div>
@@ -370,9 +370,9 @@ const OrderManagement = () => {
                                 </div>
                                 <div className="item-details">
                                   <div className="item-name">{item.name}</div>
-                                  <div className="item-price">${item.price.toFixed(2)} x {item.quantity}</div>
+                                  <div className="item-price">₹{item.price.toFixed(2)} x {item.quantity}</div>
                                 </div>
-                                <div className="item-total">${(item.price * item.quantity).toFixed(2)}</div>
+                                <div className="item-total">₹{(item.price * item.quantity).toFixed(2)}</div>
                               </div>
                             ))}
                           </div>
