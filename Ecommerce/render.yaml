@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: ecommerce-backend
-    env: java
-    buildCommand: mvn clean install
-    startCommand: java -jar target/*.jar
-    plan: free
-    autoDeploy: true

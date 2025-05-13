@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Base URL for our backend API
-const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = 'https://a7ac-2409-40f4-3103-1f22-c7df-2439-c966-8c6f.ngrok-free.app/api';
 
 // Create axios instance with baseURL
 const api = axios.create({
